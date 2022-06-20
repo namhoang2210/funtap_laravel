@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 @section('title','Dashboard - Bài đăng')
 @section('content')
-    <div class="bg-white m-10 rounded-lg min-h-[350px] p-10">
+    <div class="bg-white m-10 rounded-lg min-h-[450px] p-10">
         @if (Session::has('success'))
             <div class="text-center w-full text-white py-3 mb-10 rounded bg-green-600">{{ Session::get('success') }}</div>
         @endif

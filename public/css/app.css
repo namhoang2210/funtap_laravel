@@ -727,6 +727,9 @@ video {
 .min-h-\[350px\] {
   min-height: 350px;
 }
+.min-h-\[450px\] {
+  min-height: 450px;
+}
 .w-5 {
   width: 1.25rem;
 }
