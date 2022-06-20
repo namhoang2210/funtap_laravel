@@ -1,3 +1,7 @@
+<?php
+    use Illuminate\Support\Facades\Route;
+    $path=Route::currentRouteName();
+?>
 <header>
     <nav class="flex flex-wrap items-center justify-between w-full py-4 md:py-0 px-10 text-lg text-gray-700 bg-white">
         <div class="text-purple-500 text-lg font-semibold flex items-center gap-2">
@@ -14,7 +18,7 @@
         <div class="hidden w-full md:flex md:items-center md:w-auto" id="menu">
             <ul class="pt-4 text-base text-gray-700 md:flex md:justify-between md:pt-0">
                 <li>
-                    <a class="md:p-4 py-2 block hover:text-purple-400" href="{{ route('admin.posts.show') }}">Bài đăng</a>
+                    <a class="md:p-4 py-2 block hover:text-purple-400 @if ($path == "admin.posts.show") text-purple-500 font-semibold  @endif" href="{{ route('admin.posts.show') }}">Bài đăng</a>
                 </li>
                 <li>
                     <a class="md:p-4 py-2 block hover:text-purple-400" href="#">Games</a>

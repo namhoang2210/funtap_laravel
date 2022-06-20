@@ -28,7 +28,10 @@ class PostController extends Controller
     }
 
     public function create(Request $request){
-        $data = ['title' => $request['title'] ,'content' =>$request['content'] ];
+        $fileExtension = $request->file('image')->getClientOriginalExtension(); // Lấy . của file
+        $fileName = time() . "_" . rand(0,9999999) . "_" . md5(rand(0,9999999)) . "." . $fileExtension;
+        $request->file('image')->storeAs('public/images', $fileName);
+        $data = ['title' => $request['title'] ,'content' =>$request['content'], 'image'=> $fileName ];
         $postNew = $this->postRepository->store($data);
         return redirect()->route('admin.posts.show')->with('success', 'Tạo bài đăng thành công !!!');
     }
