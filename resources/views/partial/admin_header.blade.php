@@ -1,10 +1,10 @@
 <header>
-    <nav class="flex flex-wrap items-center justify-between w-full py-4 md:py-0 px-4 text-lg text-gray-700 bg-white">
+    <nav class="flex flex-wrap items-center justify-between w-full py-4 md:py-0 px-10 text-lg text-gray-700 bg-white">
         <div class="text-purple-500 text-lg font-semibold flex items-center gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" />
             </svg>
-            <a href="#">
+            <a href="{{ route('admin.index') }}">
               Dashboard
             </a>
         </div>
@@ -14,7 +14,7 @@
         <div class="hidden w-full md:flex md:items-center md:w-auto" id="menu">
             <ul class="pt-4 text-base text-gray-700 md:flex md:justify-between md:pt-0">
                 <li>
-                    <a class="md:p-4 py-2 block hover:text-purple-400" href="{{ route('admin.posts') }}">Bài đăng</a>
+                    <a class="md:p-4 py-2 block hover:text-purple-400" href="{{ route('admin.posts.show') }}">Bài đăng</a>
                 </li>
                 <li>
                     <a class="md:p-4 py-2 block hover:text-purple-400" href="#">Games</a>

@@ -19,7 +19,17 @@ class PostController extends Controller
     }
 
     public function show(){
-        $posts = $this->postRepository->all();
+        $posts = $this->postRepository->showOrderBy();
         return view('admin.posts.index',['posts' => $posts]);
+    }
+
+    public function loadFormCreate(){
+        return view('admin.posts.create');
+    }
+
+    public function create(Request $request){
+        $data = ['title' => $request['title'] ,'content' =>$request['content'] ];
+        $postNew = $this->postRepository->store($data);
+        return redirect()->route('admin.posts.show')->with('success', 'Tạo bài đăng thành công !!!');
     }
 }

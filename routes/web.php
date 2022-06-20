@@ -27,6 +27,11 @@ Route::get('/news', [PostController::class, 'index'])->name('news');
 Route::group(['prefix' => 'admin','as' => 'admin.'],function () {
     Route::get('/', function () {
         return view('admin.index');
+    })->name('index');
+
+    Route::group(['prefix' => 'posts','as' => 'posts.'],function () {
+        Route::get('/', [PostController::class, 'show'])->name('show');
+        Route::get('/formCreate', [PostController::class, 'loadFormCreate'])->name('loadFormCreate');
+        Route::post('/create', [PostController::class, 'create'])->name('create');
     });
-    Route::get('/posts', [PostController::class, 'show'])->name('posts');
 });

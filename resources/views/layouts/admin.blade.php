@@ -11,9 +11,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body  class="antialiased bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400">
+<body  class="relative antialiased bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400">
     @include('partial.admin_header')
     @yield('content')
+    @include('partial.admin_footer')
 <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
 </body>
 </html>
