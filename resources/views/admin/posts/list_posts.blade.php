@@ -1,5 +1,8 @@
 <div class="w-full">
         <div class="border-b m-10 border-gray-200 shadow">
+            @if($posts->count() == 0)
+                <h1 class="text-center text-xl text-gray-800 py-10">Chưa có bài đăng !!!</h1>
+            @else
             <table class="w-full table-auto">
                 <thead class="bg-gray-50 whitespace-nowrap">
                     <tr>
@@ -50,5 +53,6 @@
                     @endforeach
                 </tbody>
             </table>
+            @endif
         </div>
     </div>
