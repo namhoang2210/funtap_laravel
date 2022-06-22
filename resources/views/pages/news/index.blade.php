@@ -1,14 +1,14 @@
 @extends('layouts.app')
 @section('title', 'Funtap - Tin tức & Sự kiện')
 @section('content')
-    <div class="bg-gray-100 py-16">
-        <div class="px-[13%] text-2xl text-orange-600 uppercase">
+    <div class="bg-gray-100 py-16 lg:px-[13%] md:px-10 px-4">
+        <div class=" text-2xl text-orange-600 uppercase">
             <a class="" href="{{ route('home') }}"> Trang chủ </a>  > <a href="{{ route('news.list') }}">Tin tức</a>
         </div>
         @if($posts->count() == 0)
             <h1 class="text-center text-xl text-gray-800 py-10">Chưa có bài đăng !!!</h1>
         @else
-            <div class="py-4 grid lg:grid-cols-3 md:grid-cols-2 lg:px-[13%] lg:gap-4">
+            <div class="py-4 grid lg:grid-cols-3 md:grid-cols-2 gap-4">
                 @foreach ($posts as $post)
                 <div class="">
                     <div class="border-2 border-gray-200 rounded-lg mb-4">

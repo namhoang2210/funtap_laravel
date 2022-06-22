@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('title', 'Funtap - Tin tức & Sự kiện')
 @section('content')
-    <div class="px-[13%] py-20 bg-gray-100">
+    <div class="px-4 md:px-10 lg:px-[13%] py-20 bg-gray-100">
         <div class=" text-2xl text-orange-600 uppercase">
             <a class="" href="{{ route('home') }}"> Trang chủ </a>  > <a href="{{ route('news.list') }}">Tin tức</a>
         </div>
