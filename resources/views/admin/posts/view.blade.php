@@ -2,11 +2,15 @@
 @section('title','Dashboard - Xem bài viết')
 @section('content')
 
-    <div class="m-10 rounded p-20 bg-white">
+    <div class="m-10 rounded p-10 bg-white">
         @if (Session::has('message'))
             <div class="text-center w-full text-white py-3 mb-10 rounded bg-green-600">{{ Session::get('message') }}</div>
         @endif
         @if(!empty($post))
+                <div class="flex justify-between items-center">
+                    <div class="text-xl font-semibold text-purple-700">Xem bài đăng</div>
+                    <button class="text-white px-4 py-2 bg-green-500 rounded hover:bg-green-600" onclick="history.back()" type="submit">Quay về</button>
+                </div>
             <div class="text-3xl pb-10 pt-6 font-semibold text-gray-800">{{ $post->title }}</div>
 
             <div class="w-full rounded flex justify-center">
