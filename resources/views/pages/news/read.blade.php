@@ -12,7 +12,7 @@
             <div class="text-3xl pb-10 pt-6 font-semibold text-gray-800">{{ $news->title }}</div>
 
             <div class="w-full rounded flex justify-center">
-                <img class="max-h-[300px] w-auto rounded" src="{{ asset('storage/images/'.$news->image) }}">
+                <img class="max-h-[300px] w-auto rounded" src="{{ $news->image }}">
             </div>
             <p class="pt-10">
                 {!! nl2br($news->content) !!}

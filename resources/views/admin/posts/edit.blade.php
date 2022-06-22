@@ -33,7 +33,7 @@
                                     </div>
                                 </div>
                                 <img class="object-cover object-center w-[200px] lg:h-48 md:h-36"
-                                     src=" {{ asset('storage/images/'.$post->image) }}" alt="blog">
+                                     src="{{$post->image}}" alt="blog">
 
                                 <div>
                                     <label class="block text-sm font-medium text-gray-700">

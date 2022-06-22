@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Repositories\PostRepository;
 use Illuminate\Http\Request;
+use CloudinaryLabs\CloudinaryLaravel\Facades\Cloudinary;
+
 
 class PostController extends Controller
 {
@@ -33,10 +35,8 @@ class PostController extends Controller
     }
 
     public function create(Request $request){
-        $fileExtension = $request->file('image')->getClientOriginalExtension(); // Lấy . của file
-        $fileName = time() . "_" . rand(0,9999999) . "_" . md5(rand(0,9999999)) . "." . $fileExtension;
-        $request->file('image')->storeAs('public/images', $fileName);
-        $data = ['title' => $request['title'] ,'content' =>$request['content'], 'image'=> $fileName ];
+        $file = cloudinary()->upload($request->file('image')->getRealPath())->getSecurePath();
+        $data = ['title' => $request['title'] ,'content' =>$request['content'], 'image'=> $file ];
         $postNew = $this->postRepository->store($data);
         return redirect()->route('admin.posts.show')->with('message', 'Tạo bài đăng thành công !!!');
     }
@@ -62,10 +62,8 @@ class PostController extends Controller
     public function update(Request $request, $id){
         $data = $request->all();
         if (array_key_exists("image",$data)){
-            $fileExtension = $request->file('image')->getClientOriginalExtension();
-            $fileName = time() . "_" . rand(0,9999999) . "_" . md5(rand(0,9999999)) . "." . $fileExtension;
-            $request->file('image')->storeAs('public/images', $fileName);
-            $data = ['title' => $request['title'] ,'content' =>$request['content'], 'image'=> $fileName ];
+            $file = cloudinary()->upload($request->file('image')->getRealPath())->getSecurePath();
+            $data = ['title' => $request['title'] ,'content' =>$request['content'], 'image'=> $file ];
             $post = $this->postRepository->update($data, $id);
         }else{
             $post = $this->postRepository->update($data, $id);

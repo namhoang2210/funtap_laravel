@@ -7,7 +7,7 @@
                 <div class="">
                     <div class="border-2 border-gray-200 rounded-lg mb-4">
                         <img class="object-cover object-center w-full lg:h-48 md:h-36"
-                             src=" {{ asset('storage/images/'.$post->image) }}" alt="blog">
+                             src=" {{$post->image }}" alt="blog">
                         <div class="p-6">
                             <h1 class="mb-2 text-lg font-medium  h-[60px] text-ellipsis overflow-hidden text-gray-900">
                                 <a class="hover:text-blue-600" href="{{route('news.read', $post->id)}}">{{$post->title}}</a>
