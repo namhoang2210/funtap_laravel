@@ -24,21 +24,21 @@
       <div class="carousel-item active float-left w-full">
         <img
           src="{{ asset('img/banner1.jpg') }}"
-          class="block w-full"
+          class="block w-full  min-h-[250px] object-cover"
           alt="Wild Landscape"
         />
       </div>
       <div class="carousel-item float-left w-full">
         <img
           src="{{ asset('img/banner2.jpg') }}"
-          class="block w-full"
+          class="block w-full  min-h-[250px] object-cover"
           alt="Camera"
         />
       </div>
       <div class="carousel-item float-left w-full">
         <img
           src="{{ asset('img/banner3.jpg') }}"
-          class="block w-full"
+          class="block w-full  min-h-[250px] object-cover"
           alt="Exotic Fruits"
         />
       </div>
@@ -62,38 +62,38 @@
       <span class="visually-hidden">Next</span>
     </button>
 </div>
-<div class="bg-[#ef4723] text-white  flex py-10 gap-10 font-bold justify-center">
+<div class="bg-[#ef4723] text-white grid lg:grid-cols-5 py-10 gap-10 font-bold grid-cols-3 px-3 lg:px-[15%]">
     <div class="text-center">
-        <div class="text-5xl font-bold">85+</div>    
-        <div class="text-lg pt-2">
+        <div class="lg:text-5xl text-2xl font-bold">85+</div>
+        <div class="lg:text-lg text-sm pt-2">
             Tựa game mobie <br>
             đã phát hành
         </div>
     </div>
     <div class="text-center">
-        <div class="text-5xl font-bold">42 Triệu</div>    
-        <div class="text-lg pt-2">
+        <div class="lg:text-5xl text-2xl font-bold">42 Triệu</div>
+        <div class="lg:text-lg text-sm pt-2">
             Khách hàng <br>
             toàn cầu
         </div>
     </div>
     <div class="text-center">
-        <div class="text-5xl font-bold">10</div>    
-        <div class="text-lg pt-2">
+        <div class="lg:text-5xl text-2xl font-bold">10</div>
+        <div class="lg:text-lg text-sm pt-2">
            Thị trường <br>
            nước ngoài
         </div>
     </div>
     <div class="text-center">
-        <div class="text-5xl font-bold">600+</div>    
-        <div class="text-lg pt-2">
+        <div class="lg:text-5xl text-2xl font-bold">600+</div>
+        <div class="lg:text-lg text-sm pt-2">
             Nhân sự tại <br>
             Hà Nội và Tp.HCM
         </div>
     </div>
     <div class="text-center">
-        <div class="text-5xl font-bold">2</div>    
-        <div class="text-lg pt-2">
+        <div class="lg:text-5xl text-2xl font-bold">2</div>
+        <div class="lg:text-lg text-sm pt-2">
             Văn phòng tại <br>
             Hà Nội và Tp.HCM
         </div>

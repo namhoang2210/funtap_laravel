@@ -1,6 +1,6 @@
-<div class="grid md:grid-cols-2 xl:grid-cols-4 mt-12 bg-white  mx-[15%]">
+<div class="grid grid-cols-2 xl:grid-cols-4 mt-12 bg-white  mx-4 md:mx-[15%]">
     <div>
-        <img  class="scale-full hover:scale-125 ease-in duration-500" src="{{ asset('img/service1.png')}}" alt="">
+        <img  class="scale-full hover:scale-125 ease-in duration-500 w-full" src="{{ asset('img/service1.png')}}" alt="">
     </div>
     <div class="p-6">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
@@ -33,5 +33,5 @@
         <div class="text-2xl font-bold py-4">Hệ sinh thái phát hành thông minh</div>
         <p class="text-gray-500">Hệ sinh thái của Funtap cho phép kết nối tới hàng triệu Game thủ tại Việt Nam và trên khắp thế giới.</p>
     </div>
-    <div> <img  class="scale-full hover:scale-125 ease-in duration-500" src="{{ asset('img/service4.png')}}" alt=""> </div>   
+    <div> <img  class="scale-full hover:scale-125 ease-in duration-500" src="{{ asset('img/service4.png')}}" alt=""> </div>
 </div>

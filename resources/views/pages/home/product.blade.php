@@ -19,7 +19,7 @@
         </div>
         <div class="carousel-inner relative w-full overflow-hidden">
           <div class="carousel-item active float-left w-full  pb-6">
-            <div class="flex justify-between items-center  px-[15%] py-10 gap-12">
+            <div class="grid lg:grid-cols-3  px-[15%] py-10 gap-12">
                 <div class="flex justify-center ">
                     <div class="rounded-lg shadow-lg bg-white max-w-sm scale-100 hover:scale-125 ease-in duration-500">
                       <a href="#!">
@@ -62,7 +62,7 @@
             </div>
           </div>
           <div class="carousel-item float-left w-full pb-6">
-            <div class="flex justify-between items-center  px-[15%] py-10 gap-10">
+            <div class="grid lg:grid-cols-3   px-[15%] py-10 gap-10">
                 <div class="flex justify-center">
                     <div class="rounded-lg shadow-lg bg-white max-w-sm">
                       <a href="#!">
@@ -102,9 +102,9 @@
                       </div>
                     </div>
                 </div>
-            </div>            
+            </div>
           </div>
         </div>
-    </div>      
+    </div>
 </div>
 
