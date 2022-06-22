@@ -18,7 +18,10 @@ Route::get('/', function () {
     return view('pages.home.index');
 })->name('home');
 
-Route::get('/news', [PostController::class, 'index'])->name('news');
+Route::group(['prefix' => 'news','as' => 'news.'],function () {
+    Route::get('/', [PostController::class, 'index'])->name('list');
+    Route::get('/{new}', [PostController::class, 'findById'])->name('read');
+});
 
 //Route::get('/login',[LoginController::class, 'showLoginForm'])->name('login');
 //Route::post('/login',[LoginController::class, 'login']);
@@ -33,5 +36,9 @@ Route::group(['prefix' => 'admin','as' => 'admin.'],function () {
         Route::get('/', [PostController::class, 'show'])->name('show');
         Route::get('/formCreate', [PostController::class, 'loadFormCreate'])->name('loadFormCreate');
         Route::post('/create', [PostController::class, 'create'])->name('create');
+        Route::get('/view/{post}', [PostController::class, 'view'])->name('view');
+        Route::get('/edit/{post}', [PostController::class, 'edit'])->name('edit');
+        Route::post('/update/{post}', [PostController::class, 'update'])->name('update');
+        Route::get('/delete/{post}', [PostController::class, 'delete'])->name('delete');
     });
 });

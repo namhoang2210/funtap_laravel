@@ -8,7 +8,7 @@ class PostRepository implements PostInterface {
     }
 
     public function findById($id){
-
+        return Post::find($id);
     }
 
     public function store(array $data){
@@ -16,11 +16,17 @@ class PostRepository implements PostInterface {
     }
 
     public function update(array $data, $id){
+        $result = Post::find($id);
+        if ($result) {
+            $result->update($data);
+            return $result;
+        }
 
+        return false;
     }
 
     public function delete($id){
-
+        return Post::destroy($id);
     }
 
     public function showOrderBy(){

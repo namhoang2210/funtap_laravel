@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('title', 'Funtap - Trang chủ')
 @section('content')
+    @include('partial.banner')
     <div class="bg-gray-100 py-16">
         @include('pages.home.about')
         @include('pages.home.service')

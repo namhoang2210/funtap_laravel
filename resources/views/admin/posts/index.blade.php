@@ -2,8 +2,8 @@
 @section('title','Dashboard - Bài đăng')
 @section('content')
     <div class="bg-white m-10 rounded-lg min-h-[450px] p-10">
-        @if (Session::has('success'))
-            <div class="text-center w-full text-white py-3 mb-10 rounded bg-green-600">{{ Session::get('success') }}</div>
+        @if (Session::has('message'))
+            <div class="text-center w-full text-white py-3 mb-10 rounded bg-green-600">{{ Session::get('message') }}</div>
         @endif
         <div class="flex justify-between items-center">
             <div class="text-xl font-semibold text-purple-700">Danh sách bài đăng</div>
@@ -48,7 +48,7 @@
                                 </td>
                                 <td class="px-6 py-4 max-w-[300px] truncate">
                                     <button class="text-sm text-gray-900 font-medium text-blue-600">
-                                        <a href="">{{ $post->title ?? null }}</a>
+                                        <a href="{{ route('admin.posts.view', $post->id) }}">{{ $post->title ?? null }}</a>
                                     </button>
                                 </td>
                                 <td class="px-6 py-4 text-center">
@@ -60,10 +60,10 @@
                                     {{ $post->updated_at === null || $post->updated_at == $post->created_at ? '' : $post->updated_at->format('H:i:s - m/d/Y') }}
                                 </td>
                                 <td class="px-6 py-4 flex justify-center">
-                                    <a href="#" class="px-4 py-1 text-sm text-white bg-blue-400 rounded">Edit</a>
+                                    <a href="{{ route('admin.posts.edit', $post->id) }}" class="px-4 py-1 text-sm text-white bg-blue-400 rounded">Edit</a>
                                 </td>
                                 <td class="px-6 py-4">
-                                    <a href="#" class="px-4 py-1 text-sm text-white bg-red-400 rounded">Delete</a>
+                                    <a href="{{ route('admin.posts.delete' , $post->id) }}" class="px-4 py-1 text-sm text-white bg-red-400 rounded">Delete</a>
                                 </td>
                             </tr>
                         @endforeach

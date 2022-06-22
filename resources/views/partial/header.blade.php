@@ -6,7 +6,7 @@
     </div>
     <div class="flex items-center gap-8 text-[15px] text-gray-700 font-semibold uppercase">
         <a class="hover:text-orange-500" href=""> Về chúng tôi</a>
-        <a class="hover:text-orange-500" href="{{ route('news') }}">Tin tức</a>
+        <a class="hover:text-orange-500" href="{{ route('news.list') }}">Tin tức</a>
         <a class="hover:text-orange-500" href="">Games</a>
         <a class="hover:text-orange-500" href="">Tuyển dụng</a>
         <a class="hover:text-orange-500" href="">Liên hệ</a>
