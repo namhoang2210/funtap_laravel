@@ -9,7 +9,7 @@
                 <path stroke-linecap="round" stroke-linejoin="round" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" />
             </svg>
             <a href="{{ route('admin.index') }}">
-              Dashboard
+              Funtap-Dashboard
             </a>
         </div>
         <svg xmlns="http://www.w3.org/2000/svg" id="menu-button" class="md:hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -18,7 +18,10 @@
         <div class="hidden w-full md:flex md:items-center md:w-auto" id="menu">
             <ul class="pt-4 text-base text-gray-700 md:flex md:justify-between md:pt-0">
                 <li>
-                    <a class="md:p-4 py-2 block hover:text-purple-400 @if ($path == "admin.posts.show") text-purple-500 font-semibold  @endif" href="{{ route('admin.posts.show') }}">Bài đăng</a>
+                    <a class="md:p-4 py-2 block hover:text-purple-400 @if ($path == "admin.about.list") text-purple-500 font-semibold  @endif " href="{{ route('admin.about.list') }}">Giới thiệu</a>
+                </li>
+                <li>
+                    <a class="md:p-4 py-2 block hover:text-purple-400 @if ($path == "admin.posts.show") text-purple-500 font-semibold  @endif " href="{{ route('admin.posts.show') }}">Bài đăng</a>
                 </li>
                 <li>
                     <a class="md:p-4 py-2 block hover:text-purple-400" href="#">Games</a>
@@ -27,7 +30,7 @@
                     <a class="md:p-4 py-2 block hover:text-purple-400" href="#">Tuyển dụng</a>
                 </li>
                 <li>
-                    <a class="md:p-4 py-2 block hover:text-purple-400" href="#">Features</a>
+                    <a class="md:p-4 py-2 block hover:text-purple-400" href="#">Liên hệ</a>
                 </li>
                 <li>
                     <a class="md:p-4 py-2 block hover:text-purple-400 text-purple-500 md:ml-8 flex items-center gap-1" href="#">

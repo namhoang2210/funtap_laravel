@@ -11,13 +11,13 @@
         <div class="hidden w-full md:flex md:items-center md:w-auto text-[17px] font-semibold " id="menu">
             <ul class="pt-4 text-gray-700 md:flex md:justify-between md:pt-0">
                 <li>
-                    <a class="md:p-4 py-2 block hover:text-orange-600" href="">Về chúng tôi</a>
+                    <a class="md:p-4 py-2 block hover:text-orange-600" href="{{route('about')}}">Về chúng tôi</a>
                 </li>
                 <li>
                     <a class="md:p-4 py-2 block hover:text-orange-600" href="{{route('news.list')}}">Tin tức</a>
                 </li>
                 <li>
-                    <a class="md:p-4 py-2 block hover:text-orange-600" href="#">Games</a>
+                    <a class="md:p-4 py-2 block hover:text-orange-600" href="https://playfun.vn/">Games</a>
                 </li>
                 <li>
                     <a class="md:p-4 py-2 block hover:text-orange-600" href="#">Tuyển dụng</a>

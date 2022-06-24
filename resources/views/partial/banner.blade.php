@@ -71,7 +71,7 @@
         </div>
     </div>
     <div class="text-center">
-        <div class="lg:text-5xl text-2xl font-bold">42 Triệu</div>
+        <div class="lg:text-5xl text-2xl font-bold whitespace-nowrap">42 Triệu</div>
         <div class="lg:text-lg text-sm pt-2">
             Khách hàng <br>
             toàn cầu

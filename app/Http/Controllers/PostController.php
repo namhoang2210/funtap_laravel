@@ -35,10 +35,16 @@ class PostController extends Controller
     }
 
     public function create(Request $request){
-        $file = cloudinary()->upload($request->file('image')->getRealPath())->getSecurePath();
-        $data = ['title' => $request['title'] ,'content' =>$request['content'], 'image'=> $file ];
-        $postNew = $this->postRepository->store($data);
-        return redirect()->route('admin.posts.show')->with('message', 'Tạo bài đăng thành công !!!');
+        if ($request->hasFile('image')) {
+            $file = cloudinary()->upload($request->file('image')->getRealPath())->getSecurePath();
+            $data = ['title' => $request['title'], 'content' => $request['content'], 'image' => $file];
+            $postNew = $this->postRepository->store($data);
+            return redirect()->route('admin.posts.show')->with('message', 'Tạo bài đăng thành công !!!');
+        }else{
+            $data = ['title' => $request['title'], 'content' => $request['content'] ];
+            $postNew = $this->postRepository->store($data);
+            return redirect()->route('admin.posts.show')->with('message', 'Tạo bài đăng thành công !!!');
+        }
     }
 
     public function findById($id){
