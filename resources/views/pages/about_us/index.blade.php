@@ -31,7 +31,7 @@
                         </div>
                     @endif
                     <div class="p-6">
-                        <div class="text-2xl font-bold ">{{$i}}</div>
+                        <div class="text-2xl font-bold ">{{$contentAbout->tile}}</div>
                         <p class="text-gray-500 pt-4 text-[15px]">{{$contentAbout->content}}</p>
                     </div>
                     @if($i%4 == 0 || $i%4 == 3)
