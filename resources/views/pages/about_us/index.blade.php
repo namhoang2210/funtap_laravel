@@ -20,28 +20,27 @@
             @endif
         </div>
 
-        @if($about->where('type','content')->count() > 0)
+        @if( $about->where('type','content')->count() > 0)
             <div class="grid grid-cols-2 xl:grid-cols-4 mt-14 bg-white px-4 md:mx-[13%]">
-                @foreach($about->where('type','content')->all() as $key => $contentAbout )
-                    @if($key %4 == 1 || $key%4 == 0)
+                <?php $i =0 ?>
+                @foreach( $about->where('type','content')->all() as $contentAbout )
+                    <?php $i += 1 ?>
+                    @if($i%4 == 1 || $i%4 == 2)
                         <div>
                             <img  class="scale-full hover:scale-125 ease-in duration-500 w-full" src="{{ $contentAbout->image}}" alt="">
                         </div>
-                        <div class="p-6">
-                            <div class="text-2xl font-bold ">{{ $contentAbout->title }}</div>
-                            <p class="text-gray-500">{{$contentAbout->content}}</p>
+                    @endif
+                    <div class="p-6">
+                        <div class="text-2xl font-bold ">{{$i}}</div>
+                        <p class="text-gray-500 pt-4 text-[15px]">{{$contentAbout->content}}</p>
+                    </div>
+                    @if($i%4 == 0 || $i%4 == 3)
+                        <div>
+                            <img  class="scale-full hover:scale-125 ease-in duration-500 w-full" src="{{ $contentAbout->image}}" alt="">
                         </div>
                     @endif
-                        @if($key %4 == 3 || $key%4 == 2)
-                            <div class="p-6">
-                                <div class="text-2xl font-bold ">{{ $contentAbout->title }}</div>
-                                <p class="text-gray-500">{{$contentAbout->content}}</p>
-                            </div>
-                            <div>
-                                <img  class="scale-full hover:scale-125 ease-in duration-500 w-full" src="{{ $contentAbout->image}}" alt="">
-                            </div>
-                        @endif
-                @endforeach
+                    @endforeach
+
             </div>
         @endif
 
