@@ -21,7 +21,7 @@
         </div>
 
         @if( $about->where('type','content')->count() > 0)
-            <div class="grid grid-cols-2 xl:grid-cols-4 mt-14 bg-white px-4 md:mx-[13%]">
+            <div class="grid grid-cols-2 xl:grid-cols-4 mt-14 bg-white px-4 md:px-0 md:mx-[13%]">
                 <?php $i =0 ?>
                 @foreach( $about->where('type','content')->all() as $contentAbout )
                     <?php $i += 1 ?>
@@ -31,7 +31,7 @@
                         </div>
                     @endif
                     <div class="p-6">
-                        <div class="text-2xl font-bold ">{{$contentAbout->tile}}</div>
+                        <div class="text-2xl font-bold ">{{ $contentAbout->title }}</div>
                         <p class="text-gray-500 pt-4 text-[15px]">{{$contentAbout->content}}</p>
                     </div>
                     @if($i%4 == 0 || $i%4 == 3)

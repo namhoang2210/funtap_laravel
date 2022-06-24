@@ -1619,6 +1619,11 @@ video {
     padding-right: 13%;
   }
 
+  .md\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
   .md\:pt-0 {
     padding-top: 0px;
   }
